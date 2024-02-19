@@ -39,7 +39,7 @@
 		"typescript": "^5"
 	},
 	"build": {
-		"appId": "io.github.mssoliveira.provadeconceito-react",
+		"appId": "io.github.mssoliveira.provadeconceito-electron",
 		"productName": "Prova de Conceito - react",
 		"mac": {
 			"category": "public.app-category.developer-tools",

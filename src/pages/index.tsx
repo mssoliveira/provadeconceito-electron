@@ -20,6 +20,7 @@ import { useGamepads } from 'react-gamepads';
 // eslint-disable-next-line @next/next/no-async-client-component
 export default function Home() {
 	if (typeof window !== 'undefined') {
+		// eslint-disable-next-line react-hooks/rules-of-hooks
 		useGamepads((controller) => {
 			setGamepads(controller);
 		});
