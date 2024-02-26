@@ -38,6 +38,8 @@ export default function Home() {
 	const [counterEight, setCounterEight] = useState<number>(0);
 	const [counterNine, setCounterNine] = useState<number>(0);
 	const [counterTen, setCounterTen] = useState<number>(0);
+	const [counterEleven, setCounterEleven] = useState<number>(0);
+	const [counterTwelve, setCounterTwelve] = useState<number>(0);
 
 	useEffect(() => {
 		if (gamepads && gamepads[0]) {
@@ -70,6 +72,12 @@ export default function Home() {
 			}
 			if (gamepads[0].buttons[9].pressed) {
 				setCounterTen(counterTen + 1);
+			}
+			if (gamepads[0].buttons[10].pressed) {
+				setCounterEleven(counterEleven + 1);
+			}
+			if (gamepads[0].buttons[11].pressed) {
+				setCounterTwelve(counterTwelve + 1);
 			}
 		}
 	}, [gamepads && gamepads[0]]);
@@ -112,6 +120,14 @@ export default function Home() {
 			: 'False';
 	const button9 =
 		gamepads && gamepads[0] && gamepads[0].buttons[9].pressed
+			? 'True'
+			: 'False';
+	const button10 =
+		gamepads && gamepads[0] && gamepads[0].buttons[10].pressed
+			? 'True'
+			: 'False';
+	const button11 =
+		gamepads && gamepads[0] && gamepads[0].buttons[11].pressed
 			? 'True'
 			: 'False';
 
@@ -165,6 +181,16 @@ export default function Home() {
 			gamepadButton: 'START',
 			pressures: button9,
 			count: counterTen,
+		},
+		{
+			gamepadButton: 'R3',
+			pressures: button10,
+			count: counterEleven,
+		},
+		{
+			gamepadButton: 'L3',
+			pressures: button11,
+			count: counterTwelve,
 		},
 	];
 
